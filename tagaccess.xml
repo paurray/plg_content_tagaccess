@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="content" method="upgrade">
+    <name>PLG_CONTENT_TAGACCESS</name>
+    <author>Paul Staub</author>
+    <creationDate>2026-07</creationDate>
+    <copyright>Free to use and modify — teaching example</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.0.4</version>
+    <description>PLG_CONTENT_TAGACCESS_XML_DESCRIPTION</description>
+
+    <namespace path="src">Joomla\Plugin\Content\TagAccess</namespace>
+
+    <files>
+        <folder plugin="tagaccess">services</folder>
+        <folder>src</folder>
+        <folder>language</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_content_tagaccess.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_content_tagaccess.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="fallback"
+                    type="textarea"
+                    label="PLG_CONTENT_TAGACCESS_FIELD_FALLBACK_LABEL"
+                    description="PLG_CONTENT_TAGACCESS_FIELD_FALLBACK_DESC"
+                    rows="3"
+                    default=""
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

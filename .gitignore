@@ -1,0 +1,15 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+
+# Build artifacts - installable zips are attached to GitHub Releases, not committed
+*.zip
+
+# Local Joomla dev noise, in case this ever runs inside a live install
+/vendor/
+*.log
