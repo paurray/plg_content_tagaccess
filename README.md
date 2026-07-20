@@ -2,8 +2,6 @@
 
 > Show or hide parts of a Joomla article based on the visitor's Access Level, and optionally the page they are on. One tag, two attributes, no framework.
 
-**[FILL IN: one screenshot or GIF here - the same article as guest vs member. A picture earns more trust than the whole README.]**
-
 <img width="960" height="547" alt="TagAccessPlugin-103" src="https://github.com/user-attachments/assets/4b09cc52-f3e8-46f1-936d-d10d5337477d" />
 
 
@@ -25,12 +23,14 @@ The plugin checks the visitor at render time. WHO = the `id` attribute (a Joomla
 
 ## Why it exists
 
-Teaching artefact. This is the "plugin tag" pattern used by commercial extensions (Regular Labs Conditional Content, ECR, Akeeba's content plugin) rebuilt at readable scale on nothing but core Joomla, so you can see exactly how the trick works before you buy the polished version. Built alongside the UAM video series on the [FILL IN: channel link] channel.
+Teaching artefact. This is the "plugin tag" pattern used by commercial extensions (Regular Labs Conditional Content, ECR, Akeeba's content plugin) rebuilt at readable scale on nothing but core Joomla, so you can see exactly how the trick works under the hood. Built alongside tutorials on the [Joomla · Astroid Framework · Tutorials & Training](https://www.youtube.com/@Astroid-Joomla-Seamlessly) channel.
+
+Work in progress - exact purpose (standalone teaching example vs. tied to specific videos) still to be decided.
 
 ## Requirements
 
-- Joomla [FILL IN: tested versions, currently: 6.1] (modern namespaced plugin, services/provider.php pattern)
-- PHP [FILL IN: tested version]
+- Joomla 6.1.1 (modern namespaced plugin, services/provider.php pattern)
+- PHP 8.3.30
 - No dependencies
 
 ## Installation
@@ -57,7 +57,7 @@ Teaching artefact. This is the "plugin tag" pattern used by commercial extension
 
 ## How it works (the whole trick)
 
-The plugin subscribes to `onContentPrepare`, which fires every time Joomla prepares article text for display. It scans the text with one regular expression, asks the application two questions (does this visitor's `getAuthorisedViewLevels()` include the required level, and does the active menu item match, if one was named), and replaces each tag block with its content, the fallback, or nothing. That is the entire mechanism, about 80 lines with comments: [FILL IN: link to src/Extension/TagAccess.php in this repo].
+The plugin subscribes to `onContentPrepare`, which fires every time Joomla prepares article text for display. It scans the text with one regular expression, asks the application two questions (does this visitor's `getAuthorisedViewLevels()` include the required level, and does the active menu item match, if one was named), and replaces each tag block with its content, the fallback, or nothing. That is the entire mechanism, about 80 lines with comments: [src/Extension/TagAccess.php](https://github.com/paurray/plg_content_tagaccess/blob/main/src/Extension/TagAccess.php).
 
 ## Current state and roadmap
 
