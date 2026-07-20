@@ -5,7 +5,7 @@
     <creationDate>2026-07</creationDate>
     <copyright>Free to use and modify — teaching example</copyright>
     <license>GNU General Public License version 2 or later</license>
-    <version>1.0.4</version>
+    <version>1.1.0</version>
     <description>PLG_CONTENT_TAGACCESS_XML_DESCRIPTION</description>
 
     <namespace path="src">Joomla\Plugin\Content\TagAccess</namespace>
@@ -30,6 +30,14 @@
                     label="PLG_CONTENT_TAGACCESS_FIELD_FALLBACK_LABEL"
                     description="PLG_CONTENT_TAGACCESS_FIELD_FALLBACK_DESC"
                     rows="3"
+                    default=""
+                />
+                <field
+                    name="downloads"
+                    type="textarea"
+                    label="PLG_CONTENT_TAGACCESS_FIELD_DOWNLOADS_LABEL"
+                    description="PLG_CONTENT_TAGACCESS_FIELD_DOWNLOADS_DESC"
+                    rows="6"
                     default=""
                 />
             </fieldset>

@@ -3,6 +3,16 @@
 All notable changes to Content - Tag Access are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/); versions follow the plugin manifest.
 
+## [1.1.0] - 2026-07-20
+
+### Added
+- `{version id="X"}` tag: outputs the version string configured for download entry `X`.
+- `{downloadlink id="X"}` tag: outputs a link (configured URL + label) for download entry `X`.
+- Optional `accesslevel="Y"` attribute on both new tags: gates the value on the visitor's access level, so one tag can do WHO + WHAT together. A failed check renders nothing (no fallback text - these tags output a value or link, not prose).
+- New `downloads` plugin option: one entry per line, `id|version|url|label` (label optional), the source data for both new tags.
+
+This is the value-injection half of the plugin-tag pattern (Akeeba-style), the other half alongside the existing `{accesslevel}` visibility gating. Same `onContentPrepare` mechanism throughout.
+
 ## [1.0.4] - 2026-07-17
 
 ### Added

@@ -2,8 +2,7 @@
 
 > Show or hide parts of a Joomla article based on the visitor's Access Level, and optionally the page they are on. One tag, two attributes, no framework.
 
-<img width="960" height="547" alt="TagAccessPlugin-103" src="https://github.com/user-attachments/assets/4b09cc52-f3e8-46f1-936d-d10d5337477d" />
-
+**[FILL IN: one screenshot or GIF here - the same article as guest vs member. A picture earns more trust than the whole README.]**
 
 ## What it does
 
@@ -20,6 +19,16 @@ Add a page condition (optional):
 ```
 
 The plugin checks the visitor at render time. WHO = the `id` attribute (a Joomla Access Level ID). WHERE = the `menuitem` attribute (a menu item ID, optional). Both must pass, or the content is removed before the page ships.
+
+Output a configured value instead of gating content:
+
+```
+{version id="my-plugin"}
+{downloadlink id="my-plugin"}
+{downloadlink id="my-plugin" accesslevel="7"}
+```
+
+`{version}` outputs a version string; `{downloadlink}` outputs a link. Both read from the plugin's `downloads` option (one entry per line: `id|version|url|label`). Add `accesslevel="Y"` to either tag to gate it by access level too - one tag doing WHO + WHAT. These are self-closing (no wrapped content), so a failed check just renders nothing.
 
 ## Why it exists
 
@@ -61,11 +70,11 @@ The plugin subscribes to `onContentPrepare`, which fires every time Joomla prepa
 
 ## Current state and roadmap
 
-**Where it stands (v1.0.4, 2026-07-17):** gating works and is live-verified on Joomla 6.1 + Astroid 3.4.2, WHO (access level) and WHERE (menu item) in one tag, with optional global fallback text. That covers the hide-and-show half of the plugin-tag pattern completely.
+**Where it stands (v1.1.0, 2026-07-20):** both halves of the plugin-tag pattern are now built. Visibility gating (`{accesslevel}`) is live-verified on Joomla 6.1 + Astroid 3.4.2, WHO (access level) and WHERE (menu item) in one tag, with optional global fallback text. Value injection (`{version}`, `{downloadlink}`) is written but not yet live-tested on a real site - code-level only so far, same `onContentPrepare` mechanism, configured via the new `downloads` option, with an optional `accesslevel` attribute so one tag can do WHO + WHAT.
 
 **Next, in rough order:**
 
-1. **Value-injection tags** - the other half of the pattern (the Akeeba-style use: download links and version numbers as tags). Instead of hiding content, a tag like `{downloadlink id="..."}` or `{version}` OUTPUTS data at render time. Same onContentPrepare mechanism this plugin already uses, just returning a value instead of deciding visibility. The official Joomla tutorial for exactly this (shortcodes replacing `{sitename}` with config values) is saved locally: `DOCS-Joomla/Sources - Plugin Development/`. Natural pairing: a download tag that is ALSO access-gated, one tag doing WHO + WHAT.
+1. **Live-verify value injection** - run `{version}` / `{downloadlink}` (with and without `accesslevel`) on a real test site the same way the WHO/WHERE tags were verified (see the Multi-Layouts test plan in this repo's parent folder), and update this line once confirmed.
 2. **Per-tag fallback** - `fallback="..."` as a tag attribute, overriding the global plugin option per block.
 3. **Options screen** - proper settings UI (candidate for the extended/paid version per the Members Only seed).
 
