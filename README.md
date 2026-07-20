@@ -77,6 +77,4 @@ GNU General Public License version 2 or later. Free to use, modify, and learn fr
 
 Credits
 
-Paul Staub - Joomla · Astroid Framework · Tutorials & Training
-
 [Paul Staub - Joomla · Astroid Framework · Tutorials & Training](https://www.youtube.com/@Astroid-Joomla-Seamlessly)
