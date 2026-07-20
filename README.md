@@ -73,7 +73,7 @@ The plugin subscribes to `onContentPrepare`, which fires every time Joomla prepa
 
 ## Version history
 
-See [CHANGELOG.md](CHANGELOG.md). Short version: 1.0.0 installed cleanly and silently did nothing (missing service provider, a lesson in itself), 1.0.4 added the WHERE dimension. Installable zips are attached to each [GitHub Release]([FILL IN: releases link once the repo exists]).
+See [CHANGELOG.md](CHANGELOG.md). Short version: 1.0.0 installed cleanly and silently did nothing (missing service provider, a lesson in itself), 1.0.4 added the WHERE dimension. Installable zips are attached to each [GitHub Release](https://github.com/paurray/plg_content_tagaccess/releases/tag/v1.0.4).
 
 ## License
 
@@ -81,4 +81,4 @@ GNU General Public License version 2 or later. Free to use, modify, and learn fr
 
 ## Credits
 
-[FILL IN: Paul Staub, channel link, and anyone else you want to credit.]
+Paul Staub - [Joomla · Astroid Framework · Tutorials & Training](https://www.youtube.com/@Astroid-Joomla-Seamlessly)
