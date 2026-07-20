@@ -4,6 +4,9 @@
 
 **[FILL IN: one screenshot or GIF here - the same article as guest vs member. A picture earns more trust than the whole README.]**
 
+<img width="960" height="547" alt="TagAccessPlugin-103" src="https://github.com/user-attachments/assets/4b09cc52-f3e8-46f1-936d-d10d5337477d" />
+
+
 ## What it does
 
 Wrap any part of an article in a tag:
