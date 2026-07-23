@@ -2,7 +2,8 @@
 
 > Show or hide parts of a Joomla article based on the visitor's Access Level, and optionally the page they are on. One tag, two attributes, no framework.
 
-<img width="960" height="547" alt="SAME-Article-Different-Window-Dressing-072326" src="https://github.com/user-attachments/assets/d8bf0276-ed62-4efd-9dbd-ec8f6ac649d3" />
+<img width="600" height="342" alt="SAME-Article-Different-Window-Dressing-072326" src="https://github.com/user-attachments/assets/bbcf5675-8fea-44d3-b49f-9a1fb97e2543" />
+
 
 ## What it does
 
