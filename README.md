@@ -67,6 +67,8 @@ Options screen - proper settings UI (candidate for the extended/paid version per
 
 Deliberately out of scope, use Regular Labs Conditional Content instead: per-group exclusion ("Silver but NOT Gold"), nested tags, non-access conditions (device, date, geolocation).
 
+Nice to have, not blocking (2026-07-23): a second pair of eyes on the plugin code itself, Sean Carney or Sonny (Astroid lead dev) both already in the loop via the Members Only email thread. Worth naming plainly: this is generic Joomla plugin code, nothing Astroid-specific, so either reviewer would be doing it as a favour rather than as the domain expert. All verification to date is self-tested, one person, one session, honestly documented but not independently confirmed.
+
 Version history
 
 See CHANGELOG.md. Short version: 1.0.0 installed cleanly and silently did nothing (missing service provider, a lesson in itself), 1.0.4 added the WHERE dimension, 1.1.0 added the WHAT dimension (value injection). Installable zips are attached to each GitHub Release.
