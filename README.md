@@ -4,6 +4,16 @@
 
 <img width="1200" height="683" alt="SAME-Article-Different-Window-Dressing-WEB" src="https://github.com/user-attachments/assets/3e082f94-ea80-4528-b4a5-a184e61f4ed6" />
 
+## Why I'm building this
+
+I built a 3-tier demo (Public, Silver, Gold) the way Joomla makes you build it by default: one menu item per tier, each with its own Access level, each generating its own URL. That's not a workaround I chose, it's a structural fact of the CMS. Every menu item is its own URL, there is no way to view a page without one pointing at it, and Joomla will not let two menu items share the same URL (a "Menu Item Alias" gets you close, reusing another item's settings, but it still generates its own separate URL). If you want three audiences to see three different things using only Joomla's native Access field, you need three menu items, full stop.
+
+That's a fine, supported way to do it, Astroid's own Multi-Layouts feature is built for exactly this case: different layout per menu item, different URL per tier. But it's also more structure than a lot of "different content per tier" problems actually need. If the underlying page is the same and only the content should change, multiplying menu items and URLs to get there is solving a routing problem you didn't need to have.
+
+Commercial plugins (Regular Labs Conditional Content, ECR, Akeeba's own content plugin) take the other route: gate the content itself, inside one article, behind one URL, and decide what to render per visitor at page-load time. I wanted to understand exactly how that trick works, well enough to explain it on camera, so I rebuilt a minimal version of it myself instead of reverse-engineering someone else's plugin. That's what this is: a small, readable plugin that lets one URL carry three tiers of content, built first as a teaching artefact for the [Joomla · Astroid Framework · Tutorials & Training](https://www.youtube.com/@Astroid-Joomla-Seamlessly) channel, and only secondarily as something that might grow into more (JED listing, extra attributes, an options screen, see the roadmap below).
+
+Whether this stays a standalone teaching example or ties more tightly to the video series is still an open question, not yet decided.
+
 ## What it does
 
 Wrap any part of an article in a tag:
@@ -95,4 +105,4 @@ GNU General Public License version 2 or later. Free to use, modify, and learn fr
 
 ## Credits
 
-Paul Staub - [Joomla · Astroid Framework · Tutorials & Training](https://www.youtube.com/@Astroid-Joomla-Seamlessly)
+Paul Staub
